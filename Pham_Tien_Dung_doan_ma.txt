@@ -1,0 +1,149 @@
+# === BÀI 1: TẠO PROJECT & CLONE VỀ MÁY ===
+
+# 1. (Thực hiện trên Github: Tạo Repository tên <Mã sinh viên>_<Họ và tên>_bai_tap, VD: 25174600060-ptdung)
+# 2. Clone Repository về máy:
+git clone <URL_Của_Repository_Bạn_Đã_Tạo>
+cd <Tên_Repository_Đã_Clone>  # VD: cd 25174600060-ptdung
+
+# === BÀI 2: CHỈNH SỬA README & COMMIT ĐẦU TIÊN ===
+
+# 1. (Chỉnh sửa nội dung file README.md bằng đoạn văn bản yêu cầu)
+git add README.md
+git commit -m "Initial commit - Updated readme content"
+git push origin main
+
+# === BÀI 3: TẠO 4 NHÁNH & FILE TXT ĐỘC LẬP ===
+
+# --- branch_1 ---
+git checkout -b branch_1
+# (Tạo và nhập nội dung cho file text_branch_1.txt)
+echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit." > text_branch_1.txt
+git add text_branch_1.txt
+git commit -m "Add text_branch_1.txt with content"
+git push origin branch_1
+
+# --- branch_2 ---
+git checkout main
+git checkout -b branch_2
+# (Tạo và nhập nội dung cho file text_branch_2.txt)
+echo "Praesent ullamcorper orci eu erat placerat sodales." > text_branch_2.txt
+git add text_branch_2.txt
+git commit -m "Add text_branch_2.txt with content"
+git push origin branch_2
+
+# --- branch_3 ---
+git checkout main
+git checkout -b branch_3
+# (Tạo và nhập nội dung cho file text_branch_3.txt)
+echo "Integer sit amet nisi aliquam, tempor libero quis, cursus erat." > text_branch_3.txt
+git add text_branch_3.txt
+git commit -m "Add text_branch_3.txt with content"
+git push origin branch_3
+
+# --- branch_4 ---
+git checkout main
+git checkout -b branch_4
+# (Tạo và nhập nội dung cho file text_branch_4.txt)
+echo "Cras ac mi nec nisi porta ultrices sed non ante." > text_branch_4.txt
+git add text_branch_4.txt
+git commit -m "Add text_branch_4.txt with content"
+git push origin branch_4
+
+
+# === BÀI 4: XÓA NHÁNH LOCAL & KIỂM TRA ===
+
+git checkout main
+git branch -d branch_4
+git branch --list
+git branch -r
+
+# === BÀI 5: CẬP NHẬT PROJECT ===
+# (Giả định không có thay đổi nào khác trên remote ngoài những gì đã push)
+git checkout main
+git pull origin main
+
+# === BÀI 6: TẠO FOLDER TRÊN MAIN VÀ CẬP NHẬT CÁC NHÁNH ===
+
+# --- Trên main ---
+git checkout main
+mkdir main_folder
+touch main_folder/main_txt_1.txt
+touch main_folder/main_txt_2.txt
+touch main_folder/main_txt_3.txt
+git add .
+git commit -m "Add main_folder and 3 text files to main branch"
+git push origin main
+
+# --- Cập nhật các nhánh con ---
+git checkout branch_1
+git merge main
+git push origin branch_1
+
+git checkout branch_2
+git merge main
+git push origin branch_2
+
+git checkout branch_3
+git merge main
+git push origin branch_3
+
+git checkout branch_4
+git merge main
+git push origin branch_4
+
+# === BÀI 7: TẠO VÀ XỬ LÝ CONFLICT (Pull Request thực hiện trên Github) ===
+
+# --- Tạo branch_5 và commit ---
+git checkout branch_1
+git checkout -b branch_5
+# (Chỉnh sửa text_branch_1.txt với nội dung dài yêu cầu)
+git add text_branch_1.txt
+git commit -m "Updated content for text_branch_1.txt on branch_5"
+git push origin branch_5
+
+# --- Tạo conflict trên branch_1 ---
+git checkout branch_1
+# (Chỉnh sửa text_branch_1.txt trên branch_1 để tạo sự khác biệt)
+git add text_branch_1.txt
+git commit -m "Conflict commit: Modified text_branch_1.txt on branch_1"
+git push origin branch_1
+
+# --- Xử lý sau khi Merge/Xóa trên Github ---
+git checkout branch_1
+git pull origin branch_1  # Lấy commit merge đã giải quyết conflict
+git branch -d branch_5
+git push origin --delete branch_5
+
+# === BÀI 8: MERGE TẤT CẢ CÁC NHÁNH VÀO MAIN (Pull Request thực hiện trên Github) ===
+
+# (Merge branch_1, branch_2, branch_3, branch_4 lần lượt vào main trên Github)
+git checkout main
+git pull origin main # Tải về các commit merge đã thực hiện trên Github
+
+# === BÀI 9: XÓA NHÁNH & CẬP NHẬT BRANCH_1 ===
+
+# --- Xóa remote branches ---
+git checkout main
+git push origin --delete branch_2
+git push origin --delete branch_3
+git push origin --delete branch_4
+
+# --- Xóa local branches ---
+git branch -d branch_2
+git branch -d branch_3
+git branch -d branch_4
+
+# --- Cập nhật branch_1 ---
+git checkout branch_1
+git merge main
+git push origin branch_1
+
+# === BÀI 10: TẠO TỆP TỔNG HỢP (Bước cuối cùng) ===
+
+git checkout main
+# Lệnh touch đúng:
+touch Pham_Tien_Dung_doan_ma.txt
+# (Dán toàn bộ các lệnh từ trên vào tệp Pham_Tien_Dung_doan_ma.txt)
+git add Pham_Tien_Dung_doan_ma.txt
+git commit -m "Final commit: Add file containing all executed git commands"
+git push origin main
