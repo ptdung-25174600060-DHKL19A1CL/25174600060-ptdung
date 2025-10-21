@@ -1,149 +1,570 @@
-# === BÀI 1: TẠO PROJECT & CLONE VỀ MÁY ===
 
-# 1. (Thực hiện trên Github: Tạo Repository tên <Mã sinh viên>_<Họ và tên>_bai_tap, VD: 25174600060-ptdung)
-# 2. Clone Repository về máy:
-git clone <URL_Của_Repository_Bạn_Đã_Tạo>
-cd <Tên_Repository_Đã_Clone>  # VD: cd 25174600060-ptdung
+Admin@Admin-PC MINGW64 /c/bai tap git
+$ git clone https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+Cloning into '25174600060-ptdung'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
 
-# === BÀI 2: CHỈNH SỬA README & COMMIT ĐẦU TIÊN ===
+Admin@Admin-PC MINGW64 /c/bai tap git
+$ cd '/c/bai tap git/25174600060-ptdung'
 
-# 1. (Chỉnh sửa nội dung file README.md bằng đoạn văn bản yêu cầu)
-git add README.md
-git commit -m "Initial commit - Updated readme content"
-git push origin main
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git add readme.md
 
-# === BÀI 3: TẠO 4 NHÁNH & FILE TXT ĐỘC LẬP ===
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git commit -m "cap nhat noi dung"
+On branch main
+Your branch is up to date with 'origin/main'.
 
-# --- branch_1 ---
-git checkout -b branch_1
-# (Tạo và nhập nội dung cho file text_branch_1.txt)
-echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit." > text_branch_1.txt
-git add text_branch_1.txt
-git commit -m "Add text_branch_1.txt with content"
-git push origin branch_1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
 
-# --- branch_2 ---
-git checkout main
-git checkout -b branch_2
-# (Tạo và nhập nội dung cho file text_branch_2.txt)
-echo "Praesent ullamcorper orci eu erat placerat sodales." > text_branch_2.txt
-git add text_branch_2.txt
-git commit -m "Add text_branch_2.txt with content"
-git push origin branch_2
+no changes added to commit (use "git add" and/or "git commit -a")
 
-# --- branch_3 ---
-git checkout main
-git checkout -b branch_3
-# (Tạo và nhập nội dung cho file text_branch_3.txt)
-echo "Integer sit amet nisi aliquam, tempor libero quis, cursus erat." > text_branch_3.txt
-git add text_branch_3.txt
-git commit -m "Add text_branch_3.txt with content"
-git push origin branch_3
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git commit -m "Initial commit - Updated readme content"
+On branch main
+Your branch is up to date with 'origin/main'.
 
-# --- branch_4 ---
-git checkout main
-git checkout -b branch_4
-# (Tạo và nhập nội dung cho file text_branch_4.txt)
-echo "Cras ac mi nec nisi porta ultrices sed non ante." > text_branch_4.txt
-git add text_branch_4.txt
-git commit -m "Add text_branch_4.txt with content"
-git push origin branch_4
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git add README.md
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git commit -m "Updated README with requested content"
+[main 2543942] Updated README with requested content
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 665 bytes | 665.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+   528ec09..2543942  main -> main
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout -b branch_1
+Switched to a new branch 'branch_1'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git add text_branch_1.txt\
+> git add text_branch_1.txt
+fatal: pathspec 'text_branch_1.txtgit' did not match any files
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git add text_branch_1.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git commit -m "Add text_branch_1.txt with content"
+[branch_1 ed5f886] Add text_branch_1.txt with content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text_branch_1.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout -b branch_2
+Switched to a new branch 'branch_2'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_2)
+$ git add text_branch_2.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_2)
+$ git commit -m "Add text_branch_2.txt with content"
+[branch_2 51baeee] Add text_branch_2.txt with content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text_branch_2.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout -b branch_3
+Switched to a new branch 'branch_3'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_3)
+$ git add text_branch_3.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_3)
+$ git commit -m "Add text_branch_3.txt with content"
+[branch_3 a87c551] Add text_branch_3.txt with content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text_branch_3.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_3)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout -b branch_4
+Switched to a new branch 'branch_4'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_4)
+$ git add text_branch_4.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_4)
+$ git commit -m "Add text_branch_4.txt with content"
+[branch_4 aa86f77] Add text_branch_4.txt with content
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text_branch_4.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_4)
+$ git checkout mainư
+error: pathspec 'mainư' did not match any file(s) known to git
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_4)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git push origin branch_1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'branch_1' on GitHub by visiting:
+remote:      https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+/pull/new/branch_1
+remote:
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ * [new branch]      branch_1 -> branch_1
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout branch_1
+Switched to branch 'branch_1'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git push origin branch_1
+Everything up-to-date
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git checkout branch_2
+Switched to branch 'branch_2'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_2)
+$ git push origin branch_2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 376 bytes | 376.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'branch_2' on GitHub by visiting:
+remote:      https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+/pull/new/branch_2
+remote:
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ * [new branch]      branch_2 -> branch_2
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_2)
+$ git checkout branch_3
+Switched to branch 'branch_3'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_3)
+$ git push origin branch_3
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 384 bytes | 384.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'branch_3' on GitHub by visiting:
+remote:      https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+/pull/new/branch_3
+remote:
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ * [new branch]      branch_3 -> branch_3
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_3)
+$ git checkout branch_4
+Switched to branch 'branch_4'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_4)
+$ git push origin branch_4
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 375 bytes | 375.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'branch_4' on GitHub by visiting:
+remote:      https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+/pull/new/branch_4
+remote:
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ * [new branch]      branch_4 -> branch_4
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_4)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git branch -d branch_4
+error: the branch 'branch_4' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D branch_4'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git branch -D branch_4
+Deleted branch branch_4 (was aa86f77).
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git branch --list
+  branch_1
+  branch_2
+  branch_3
+* main
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git pull origin main
+From https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ mkdir main_folder
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git add .
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git commit -m "Add main_folder and 3 text files to main branch"
+Merge branch 'main' into branch_1
 
 
-# === BÀI 4: XÓA NHÁNH LOCAL & KIỂM TRA ===
 
-git checkout main
-git branch -d branch_4
-git branch --list
-git branch -r
 
-# === BÀI 5: CẬP NHẬT PROJECT ===
-# (Giả định không có thay đổi nào khác trên remote ngoài những gì đã push)
-git checkout main
-git pull origin main
 
-# === BÀI 6: TẠO FOLDER TRÊN MAIN VÀ CẬP NHẬT CÁC NHÁNH ===
 
-# --- Trên main ---
-git checkout main
-mkdir main_folder
-touch main_folder/main_txt_1.txt
-touch main_folder/main_txt_2.txt
-touch main_folder/main_txt_3.txt
-git add .
-git commit -m "Add main_folder and 3 text files to main branch"
-git push origin main
 
-# --- Cập nhật các nhánh con ---
-git checkout branch_1
-git merge main
-git push origin branch_1
 
-git checkout branch_2
-git merge main
-git push origin branch_2
 
-git checkout branch_3
-git merge main
-git push origin branch_3
 
-git checkout branch_4
-git merge main
-git push origin branch_4
 
-# === BÀI 7: TẠO VÀ XỬ LÝ CONFLICT (Pull Request thực hiện trên Github) ===
 
-# --- Tạo branch_5 và commit ---
-git checkout branch_1
-git checkout -b branch_5
-# (Chỉnh sửa text_branch_1.txt với nội dung dài yêu cầu)
-git add text_branch_1.txt
-git commit -m "Updated content for text_branch_1.txt on branch_5"
-git push origin branch_5
 
-# --- Tạo conflict trên branch_1 ---
-git checkout branch_1
-# (Chỉnh sửa text_branch_1.txt trên branch_1 để tạo sự khác biệt)
-git add text_branch_1.txt
-git commit -m "Conflict commit: Modified text_branch_1.txt on branch_1"
-git push origin branch_1
 
-# --- Xử lý sau khi Merge/Xóa trên Github ---
-git checkout branch_1
-git pull origin branch_1  # Lấy commit merge đã giải quyết conflict
-git branch -d branch_5
-git push origin --delete branch_5
 
-# === BÀI 8: MERGE TẤT CẢ CÁC NHÁNH VÀO MAIN (Pull Request thực hiện trên Github) ===
 
-# (Merge branch_1, branch_2, branch_3, branch_4 lần lượt vào main trên Github)
-git checkout main
-git pull origin main # Tải về các commit merge đã thực hiện trên Github
 
-# === BÀI 9: XÓA NHÁNH & CẬP NHẬT BRANCH_1 ===
 
-# --- Xóa remote branches ---
-git checkout main
-git push origin --delete branch_2
-git push origin --delete branch_3
-git push origin --delete branch_4
 
-# --- Xóa local branches ---
-git branch -d branch_2
-git branch -d branch_3
-git branch -d branch_4
 
-# --- Cập nhật branch_1 ---
-git checkout branch_1
-git merge main
-git push origin branch_1
 
-# === BÀI 10: TẠO TỆP TỔNG HỢP (Bước cuối cùng) ===
 
-git checkout main
-# Lệnh touch đúng:
-touch Pham_Tien_Dung_doan_ma.txt
-# (Dán toàn bộ các lệnh từ trên vào tệp Pham_Tien_Dung_doan_ma.txt)
-git add Pham_Tien_Dung_doan_ma.txt
-git commit -m "Final commit: Add file containing all executed git commands"
-git push origin main
+
+Merge made by the 'ort' strategy.
+ main_folder/main_txt_1.txt | 0
+ main_folder/main_txt_2.txt | 0
+Merge branch 'main' into branch_2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Merge made by the 'ort' strategy.
+ main_folder/main_txt_1.txt | 0
+ main_folder/main_txt_2.txt | 0
+Merge branch 'main' into branch_3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Merge made by the 'ort' strategy.
+ main_folder/main_txt_1.txt | 0
+ main_folder/main_txt_2.txt | 0
+ main_folder/main_txt_3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main_folder/main_txt_1.txt
+ create mode 100644 main_folder/main_txt_2.txt
+ create mode 100644 main_folder/main_txt_3.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_3)
+$ git push origin branch_3
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 379 bytes | 379.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+   a87c551..639604e  branch_3 -> branch_3
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_3)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout branch_1
+Switched to branch 'branch_1'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git checkout -b branch_5
+Switched to a new branch 'branch_5'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_5)
+$ git add text_branch_1.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_5)
+$ git commit -m "Updated content for text_branch_1.txt on branch_5"
+[branch_5 650e4d3] Updated content for text_branch_1.txt on branch_5
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_5)
+$ git push origin branch_5
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 684 bytes | 684.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch_5' on GitHub by visiting:
+remote:      https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+/pull/new/branch_5
+remote:
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ * [new branch]      branch_5 -> branch_5
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_5)
+$ git checkout branch_1
+Switched to branch 'branch_1'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git add text_branch_1.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git commit -m "Conflict commit: Modified text_branch_1.txt on branch_1"
+[branch_1 cb1a8b7] Conflict commit: Modified text_branch_1.txt on branch_1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git push origin branch_1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+   ba201b9..cb1a8b7  branch_1 -> branch_1
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git checkout branch_1
+Already on 'branch_1'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git pull origin branch_1
+From https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+ * branch            branch_1   -> FETCH_HEAD
+Already up to date.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git branch -d branch_5
+error: the branch 'branch_5' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D branch_5'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git branch -D branch_5
+Deleted branch branch_5 (was 650e4d3).
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git push origin --delete branch_5
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ - [deleted]         branch_5
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git pull origin main
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (7/7), 3.78 KiB | 148.00 KiB/s, done.
+From https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+ * branch            main       -> FETCH_HEAD
+   4b295ce..c29e0a0  main       -> origin/main
+Updating 4b295ce..c29e0a0
+Fast-forward
+ text_branch_1.txt | 1 +
+ text_branch_2.txt | 1 +
+ text_branch_3.txt | 1 +
+ text_branch_4.txt | 1 +
+ 4 files changed, 4 insertions(+)
+ create mode 100644 text_branch_1.txt
+ create mode 100644 text_branch_2.txt
+ create mode 100644 text_branch_3.txt
+ create mode 100644 text_branch_4.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git branch -d branch_2
+Deleted branch branch_2 (was a2cbcd5).
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git branch -d branch_3
+Deleted branch branch_3 (was 639604e).
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git branch -d branch_4
+error: branch 'branch_4' not found
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git push origin --delete branch_2
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ - [deleted]         branch_2
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git push origin --delete branch_3
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ - [deleted]         branch_3
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git push origin --delete branch_4
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+ - [deleted]         branch_4
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git checkout branch_1
+Switched to branch 'branch_1'
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git merge main
+Updating cb1a8b7..c29e0a0
+Fast-forward
+ text_branch_2.txt | 1 +
+ text_branch_3.txt | 1 +
+ text_branch_4.txt | 1 +
+ 3 files changed, 3 insertions(+)
+ create mode 100644 text_branch_2.txt
+ create mode 100644 text_branch_3.txt
+ create mode 100644 text_branch_4.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git push origin branch_1
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+   cb1a8b7..c29e0a0  branch_1 -> branch_1
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (branch_1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ touch <Pham_Tien_Dung>_doan_ma.txt
+bash: Pham_Tien_Dung: No such file or directory
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ touch Pham_Tien_Dung_doan_ma.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git add Pham_Tien_Dung_doan_ma.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git commit -m "Final commit: Add all executed git commands"
+[main 1a59e87] Final commit: Add all executed git commands
+ 1 file changed, 149 insertions(+)
+ create mode 100644 Pham_Tien_Dung_doan_ma.txt
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.84 KiB | 1.84 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung.git
+   c29e0a0..1a59e87  main -> main
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$ git clone https://github.com/ptdung-25174600060-DHKL19A1CL/25174600060-ptdung
+Cloning into '25174600060-ptdung'...
+remote: Enumerating objects: 41, done.
+remote: Counting objects: 100% (41/41), done.
+remote: Compressing objects: 100% (34/34), done.
+remote: Total 41 (delta 15), reused 21 (delta 2), pack-reused 0 (from 0)
+Receiving objects: 100% (41/41), 9.20 KiB | 1.02 MiB/s, done.
+Resolving deltas: 100% (15/15), done.
+
+Admin@Admin-PC MINGW64 /c/bai tap git/25174600060-ptdung (main)
+$
